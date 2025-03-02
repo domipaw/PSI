@@ -56,3 +56,43 @@ frequent_terms
 frequent_terms <- freq_terms(text, stopwords = Top200Words)
 plot(frequent_terms)
 
+# zadanie 3
+
+
+text_1<- readLines(file.choose('Downloads/Biden - First address to Congress_2021.txt')
+text
+text_2 <- readLines(file.choose('Downloads/Biden - State of the Union 2024.txt')
+text
+library(qdap)
+
+frequent_terms <- freq_terms(text, stopwords = Top200Words)
+frequent_terms
+plot(frequent_terms)
+
+
+install.packages("wordcloud")
+library(wordcloud)
+
+?wordcloud
+?brewer.pal
+brewer.pal.info
+
+wordcloud(frequent_terms$WORD, frequent_terms$FREQ, min.freq = 4, colors = brewer.pal(8,"Dark2"))
+wordcloud(frequent_terms$WORD, frequent_terms$FREQ, max.words = 5, colors = brewer.pal(8,"Accent"))
+
+text_1 <- readLines((file.choose('Downloads/Biden - First address to Congress_2021.txt')
+text_2 <- readLines((file.choose('Downloads/Biden - State of the Union 2024.txt')
+
+frequent_terms_1 <- freq_terms(text_1, stopwords = Top200Words)
+frequent_terms_1
+plot(frequent_terms_1)
+
+frequent_terms_2 <- freq_terms(text_2, stopwords = Top200Words)
+frequent_terms_2
+plot(frequent_terms_2)
+
+wordcloud(frequent_terms_1$WORD, frequent_terms_1$FREQ, min.freq = 4, colors = brewer.pal(9,"Greens"))
+wordcloud(frequent_terms_1$WORD, frequent_terms_1$FREQ, max.words = 5, colors = brewer.pal(8,"Accent"))
+
+wordcloud(frequent_terms_2$WORD, frequent_terms_2$FREQ, min.freq = 4, colors = brewer.pal(9,"Greens"))
+wordcloud(frequent_terms_2$WORD, frequent_terms_2$FREQ, max.words = 5, colors = brewer.pal(8,"Accent"))
